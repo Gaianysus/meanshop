@@ -130,7 +130,7 @@ update:
 	cp -a server node/
 
 node.cid: meango.cid MEANSHOPTMP
-	/usr/bin/time -v docker build -t `cat TAG`:node -f node.Dockerfile
+	/usr/bin/time -v docker build -t `cat TAG`:node -f alpine.Dockerfile .
 	$(eval TMP := $(shell mktemp -d --suffix=DOCKERTMP))
 	$(eval NAME := $(shell cat NAME))
 	$(eval MEANSHOPTMP := $(shell cat MEANSHOPTMP))
