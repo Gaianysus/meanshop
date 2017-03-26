@@ -16,7 +16,9 @@ npm install -g bower grunt-cli
 
 
 RUN cd /; \
-git clone https://github.com/Thalhalla/meanshop.git && \
+git clone https://github.com/Gaianysus/meanshop.git && \
+cd /meanshop && \
+git checkout gaianysus && \
 chown -R meanshop. /meanshop
 WORKDIR /meanshop
 

@@ -19,12 +19,12 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL'>> /etc/sudoers && \
 apt-get -y autoremove && \
 apt-get clean && \
 rm -Rf /var/lib/apt/lists/* && \
-cd / && \
-git clone https://github.com/Thalhalla/meanshop.git && \
-mkdir -p /meanshop/client/bower_components && \
-chown -R meanshop. /meanshop && \
 mkdir -p /home/meanshop && \
-chown -R meanshop. /home/meanshop
+chown -R meanshop. /home/meanshop && \
+SUDO_FORCE_REMOVE=yes apt-get remove -qqy sudo
+
+COPY . /meanshop
+RUN chown -R meanshop. /meanshop
 
 USER meanshop
 WORKDIR /meanshop
@@ -40,8 +40,5 @@ source /home/meanshop/.rvm/scripts/rvm && \
 gem install sass && \
 sudo npm install -g bower grunt-cli yo gulp"
 
-USER root
-RUN chown -R meanshop. /meanshop
-RUN SUDO_FORCE_REMOVE=yes apt-get remove -qqy sudo
-USER meanshop
-CMD ["npm", "start"]
+COPY node/start.sh /start.sh
+CMD ["/start.sh"]
