@@ -280,9 +280,6 @@ form.navbar-form {
   border-color: $bgcolor5;
 }
 .ng-scope {
-  color: $color;
-  background-color: $bgcolor4;
-  border-color: $bgcolor4;
 }
 .ng-valid {
   color: $color;
@@ -338,4 +335,58 @@ hr {
   color: $color;
   background-color: $bgcolor3;
   border-color: $color2;
+}
+a.navbar-brand {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+a.navbar-brand:focus {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+.navbar-default .navbar-brand {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+.form-control::-moz-placeholder {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: $color2;
+  background-color: $bgcolor;
+  border-color: $bgcolor5;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  color: $color2;
+  background-color: $bgcolor;
+  border-color: $bgcolor5;
+}
+.container .ng-scope{
+  background-color: $bgcolor4;
+  border-color: $bgcolor4;
+}
+.row {
+  background-color: $bgcolor;
+  border-color: $bgcolor4;
 }
