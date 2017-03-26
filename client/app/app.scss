@@ -299,3 +299,8 @@ input {
   background-color: $bgcolor3;
   border-color: $color2;
 }
+hr {
+  color: $color;
+  background-color: $bgcolor3;
+  border-top: 1px solid $color2;
+}
