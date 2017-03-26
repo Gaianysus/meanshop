@@ -203,6 +203,15 @@ html {
   background: $color3;
 }
 
+#banner {
+  position: relative;
+  padding: 30px 15px;
+  color: $linkcolor;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: $color3;
+}
+
 .page-header {
   border-bottom: 1px solid $bgcolor2;
 }
@@ -249,4 +258,34 @@ form.navbar-form {
 
 #searchBox {
   border-color: $bgcolor5;
+}
+.ng-scope {
+  color: $color;
+  background-color: $bgcolor2;
+  border-color: $bgcolor2;
+}
+.table-striped > tbody > tr:nth-child(odd) > td {
+  color: $color;
+  background-color: $bgcolor2;
+  border-color: $color2;
+}
+.table-striped > tbody > tr:nth-child(even) > td {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+th, .table > tfoot > tr > td {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
+}
+input {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
 }
