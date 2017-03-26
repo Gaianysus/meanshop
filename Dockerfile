@@ -20,8 +20,7 @@ apt-get -y autoremove && \
 apt-get clean && \
 rm -Rf /var/lib/apt/lists/* && \
 mkdir -p /home/meanshop && \
-chown -R meanshop. /home/meanshop && \
-SUDO_FORCE_REMOVE=yes apt-get remove -qqy sudo
+chown -R meanshop. /home/meanshop
 
 COPY . /meanshop
 RUN chown -R meanshop. /meanshop
@@ -40,5 +39,8 @@ source /home/meanshop/.rvm/scripts/rvm && \
 gem install sass && \
 sudo npm install -g bower grunt-cli yo gulp"
 
+USER root
+RUN SUDO_FORCE_REMOVE=yes apt-get remove -qqy sudo
+USER meanshop
 COPY node/start.sh /start.sh
 CMD ["/start.sh"]
