@@ -53,33 +53,40 @@ Catalog
   })
   .then(function() {
     return Product.create({
-      title: 'CS:GO',
-      imageUrl: '/assets/uploads/csgo.png',
-      price: 15,
+      title: 'Gaia 8',
+      imageUrl: '/assets/uploads/gaia-8.png',
+      price: 1899,
       stock: 999,
       categories: [home],
-      description: 'Counter Strike : Global Offense'
+      description: 'Gaia 8 the amazing grow light'
     }, {
-      title: 'Team Fortress 2',
-      imageUrl: '/assets/uploads/tf2.png',
-      price: 8,
-      stock: 999,
+      title: 'Gaia 4',
+      imageUrl: '/assets/uploads/gaia-4.png',
+      price: 699,
+      stock: 15,
+      categories: [home],
+      description: 'Gaia 4 the amazing grow light'
+    }, {
+      title: 'Persephone Bloom',
+      imageUrl: '/assets/uploads/persephone.png',
+      price: 99,
+      stock: 8,
       categories: [books],
-      description: 'Team Fortress 2 - the classic FPS'
+      description: 'Persephone bloom'
     }, {
-      title: 'Arma3',
-      imageUrl: '/assets/uploads/arma3.png',
-      price: 16,
-      stock: 999,
+      title: 'Gaianysus T-shirt',
+      imageUrl: '/assets/uploads/gaianysus.png',
+      price: 29,
+      stock: 15,
       categories: [clothing],
-      description: 'Arma3 the military simulator'
+      description: 'The Gaianysus T-shirt'
     }, {
-      title: '7 days to die',
-      imageUrl: '/assets/uploads/7dtd.png',
-      price: 18,
-      stock: 999,
+      title: 'Gaia 6',
+      imageUrl: '/assets/uploads/gaia-6.png',
+      price: 1299,
+      stock: 18,
       categories: [home],
-      description: '7 days to die the survival horror game that defined the genre'
+      description: 'Gaia 6 - the mid range beast light'
     });
   })
   .then(function () {

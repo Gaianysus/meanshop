@@ -30,19 +30,29 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // Set theme colors
 //
 
-  $color: #33dd00;
-  $color2: #11bb00;
-  $linkcolor: #33ff33;
-  $bgcolor: black;
-  $bgcolor2: rgba(14, 0, 14, 0.5);
-  $bgcolor3: rgba(42, 0, 42, 0.7);
+  $color: #de00fe;
+  $color2: #6a00ff;
+  $color3: #0000ff;
+  $linkcolor: #ff00ff;
+  $bgcolor: rgba(42, 2, 42, 0.9);
+  $bgcolor2: rgba(52, 2, 42, 0.7);
+  $bgcolor3: rgba(62, 2, 42, 0.7);
+  $bgcolor4: rgba(230, 4, 164, 1);
+  $bgcolor4: rgba(0, 0, 0, 0);
 
 html {
   color: $color;
   background-color: $bgcolor;
+  background-image: url("/assets/images/checkboxpattern.png");
+  background-clip: border-box !important;
+  background-origin: padding-box !important;
+  background-repeat: repeat !important;
+  background-size: auto !important;
+  background-position: left top !important;
+  background-attachment: scroll !important;
   body {
     color: $color;
-    background-color: $bgcolor2;
+    background-color: $bgcolor4;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -174,4 +184,13 @@ html {
     padding: 6px 12px;
     text-decoration: none;
   }
+}
+
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: $linkcolor;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: $color3;
 }
