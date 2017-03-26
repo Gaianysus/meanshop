@@ -42,7 +42,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 html {
   color: $color;
-  background-color: $bgcolor;
+  background-color: $bgcolor4;
   background-image: url("/assets/images/checkboxpattern.png");
   background-clip: border-box !important;
   background-origin: padding-box !important;
@@ -93,10 +93,26 @@ html {
   }
 }
 
-.navbar {
+navbar.ng-scope {
   color: $color;
   background-color: $bgcolor;
   border-color: $bgcolor2;
+}
+
+navbar {
+  color: $color;
+  background-color: $bgcolor;
+  border-color: $bgcolor2;
+  .ng-scope {
+    color: $color;
+    background-color: $bgcolor;
+    border-color: $bgcolor2;
+  }
+  .navbar-default {
+    color: $color;
+    background-color: $bgcolor2;
+    border-color: $bgcolor2;
+  }
   .navbar-header {
     color: $color;
     background-color: $bgcolor2;
@@ -154,6 +170,10 @@ html {
   }
 }
 
+.navbar-default .navbar-nav > .active > a {
+  color: $color2;
+  background-color: $bgcolor3;
+}
 
 .navbar-form {
   color: $color;
@@ -261,6 +281,16 @@ form.navbar-form {
 }
 .ng-scope {
   color: $color;
+  background-color: $bgcolor4;
+  border-color: $bgcolor4;
+}
+.ng-valid {
+  color: $color;
+  background-color: $bgcolor2;
+  border-color: $bgcolor2;
+}
+.ng-touched {
+  color: $color;
   background-color: $bgcolor2;
   border-color: $bgcolor2;
 }
@@ -303,4 +333,9 @@ hr {
   color: $color;
   background-color: $bgcolor3;
   border-top: 1px solid $color2;
+}
+.input-large {
+  color: $color;
+  background-color: $bgcolor3;
+  border-color: $color2;
 }
