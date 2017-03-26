@@ -54,35 +54,35 @@ Catalog
   .then(function() {
     return Product.create({
       title: 'Gaia 8',
-      imageUrl: '/assets/uploads/gaia-8.png',
+      imageUrl: '/assets/images/gaia-8.png',
       price: 1899,
       stock: 999,
       categories: [home],
       description: 'Gaia 8 the amazing grow light'
     }, {
       title: 'Gaia 4',
-      imageUrl: '/assets/uploads/gaia-4.png',
+      imageUrl: '/assets/images/gaia-4.png',
       price: 699,
       stock: 15,
       categories: [home],
       description: 'Gaia 4 the amazing grow light'
     }, {
       title: 'Persephone Bloom',
-      imageUrl: '/assets/uploads/persephone.png',
+      imageUrl: '/assets/images/persephone.png',
       price: 99,
       stock: 8,
       categories: [books],
       description: 'Persephone bloom'
     }, {
       title: 'Gaianysus T-shirt',
-      imageUrl: '/assets/uploads/gaianysus.png',
+      imageUrl: '/assets/images/gaianysus.png',
       price: 29,
       stock: 15,
       categories: [clothing],
       description: 'The Gaianysus T-shirt'
     }, {
       title: 'Gaia 6',
-      imageUrl: '/assets/uploads/gaia-6.png',
+      imageUrl: '/assets/images/gaia-6.png',
       price: 1299,
       stock: 18,
       categories: [home],
