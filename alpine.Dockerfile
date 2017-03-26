@@ -15,12 +15,12 @@ gem install sass 2>/dev/null; echo 0 && \
 npm install -g bower grunt-cli
 
 
+COPY . /meanshop
 RUN cd /; \
-git clone https://github.com/Gaianysus/meanshop.git && \
 cd /meanshop && \
-git checkout gaianysus && \
 chown -R meanshop. /meanshop
 WORKDIR /meanshop
+USER meanshop
 
 RUN npm install && \
 bower install && \
