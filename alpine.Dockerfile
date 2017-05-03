@@ -1,6 +1,6 @@
 FROM node:boron-alpine
 
-ENV THALHALLA_MEANSHOP=20170421 \
+ENV GAIANYSUS_MEANSHOP=20170421 \
 BUILD_PACKAGES='bash curl-dev ruby-dev build-base git libpng-dev' \
 RUBY_PACKAGES='ruby-rdoc ruby ruby-io-console ruby-bundler'
 

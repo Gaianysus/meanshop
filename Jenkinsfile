@@ -3,7 +3,7 @@
 node {
 
 
-    git credentialsId: 'thalhallajenkins-github', url: 'https://github.com/Thalhalla/meanshop.git'
+    git credentialsId: 'thalhallajenkins-github', url: 'https://github.com/gaianysus/meanshop.git'
     currentBuild.result = "SUCCESS"
 
     env.NODE_ENV = "test"

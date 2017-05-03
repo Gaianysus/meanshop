@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-ENV THALHALLA_MEANSHOP 20170421
+ENV GAIANYSUS_MEANSHOP 20170421
 
 RUN apk update && \
 apk upgrade && \

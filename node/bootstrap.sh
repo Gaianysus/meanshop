@@ -1,5 +1,5 @@
 #!/bin/bash -l
-: ${BRANCH=master}
+: ${BRANCH=gaianysus}
 
 cd /meanshop
 if [ -d ".git" ]; then
@@ -8,7 +8,7 @@ if [ -d ".git" ]; then
     git checkout $BRANCH
 else
     git init
-    git remote add http https://github.com/Thalhalla/meanshop.git
+    git remote add http https://github.com/gaianysus/meanshop.git
     git fetch --prune http
     git checkout $BRANCH
 fi

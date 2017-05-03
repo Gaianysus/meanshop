@@ -1,7 +1,7 @@
 FROM node:boron
 MAINTAINER Josh Cox <josh 'at' webhosting.coop>
 
-ENV MEANSHOP_UPDATED 20170318
+ENV GAIASHOP_UPDATED 20170503
 ENV LANG en_US.UTF-8
 
 RUN DEBIAN_FRONTEND=noninteractive \

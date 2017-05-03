@@ -2,7 +2,7 @@
 lock '3.7.2'
 
 set :application, 'meanshop'
-set :repo_url, 'https://github.com/Thalhalla/meanshop.git'
+set :repo_url, 'https://github.com/gaianysus/meanshop.git'
 set :node_version, '6.9.4'
 set :pty, true
 set :forward_agent, true
