@@ -140,7 +140,7 @@ node.cid: meango.cid MEANSHOPTMP
 	chmod 777 $(TMP)
 	@docker run --name=$(NAME)-node \
 	--cidfile="node.cid" \
-	--link meanshop-meango:meango \
+	--link $(NAME)-meango:meango \
 	-e BRANCH=$(BRANCH) \
 	-p 9000:9000 \
 	-d \
@@ -160,7 +160,7 @@ logsnode:
 	@docker logs -f `cat node.cid`
 
 nginx.cid:
-	/usr/bin/time -v docker build -t `cat TAG`:nginx -f nginx.Dockerfile
+	/usr/bin/time -v docker build -t `cat TAG`:nginx -f nginx.Dockerfile .
 	$(eval TMP := $(shell mktemp -d --suffix=DOCKERTMP))
 	$(eval NAME := $(shell cat NAME))
 	$(eval TAG := $(shell cat TAG))
@@ -169,7 +169,7 @@ nginx.cid:
 	chmod 777 $(TMP)
 	@docker run --name=$(NAME)-nginx \
 	--cidfile="nginx.cid" \
-	--link meanshop-node:meanshop-node \
+	--link $(NAME)-node:$(NAME)-node \
 	-v $(TMP):/tmp \
 	-e BRANCH=$(BRANCH) \
 	-p $(PORT):80 \
@@ -204,3 +204,6 @@ tmpcleaner:
 serve:
 	sudo systemctl start mongodb
 	grunt serve
+
+ab:
+	ab -n 1000 -c 100 https://shop.gaianysus.com/

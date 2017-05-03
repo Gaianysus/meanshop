@@ -1,3 +1,13 @@
 FROM nginx:alpine
-COPY nginx/meanshop.conf /etc/nginx/conf.d/default.conf
+
+ENV THALHALLA_MEANSHOP 20170421
+
+RUN apk update && \
+apk upgrade && \
+apk add openssl && \
+apk add bash && \
+rm -rf /var/cache/apk/*
+
+COPY nginx /assets
 COPY client /meanshop/current/dist/public
+CMD ["/assets/start.sh"]
